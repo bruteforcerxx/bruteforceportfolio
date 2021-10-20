@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Bruteforce web services website">
+    <meta name="author" content="Olu Michael">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="theme-color" content="#0027e3">
+      <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#0027e3">
+  <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0027e3">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Bruteforce web services</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" >
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}" >
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-onix-digital.css' %}" >
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}" >
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}" >
+
+<!--
+
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container" style="background-color: white; min-width: 100%">
+      <div class="row" style="background-color: white; min-width: 100%">
+        <div class="col-12" style="background-color: white; min-width: 100%">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="{% static 'assets/images/brute.png' %}" style="max-width: 250px; max-height: 80px; margin-left:-20;top:-20">
+            </a>
+            <!-- ***** Logo End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+                <div class="item header-text">
+                  <h7>{{ email }} subscribed!</h7>
+                  <h2>Thank you <em>for subscribing</em> to our<span> news letter.</span></h2>
+                  <div class="down-buttons">
+                    <div class="main-blue-button-hover">
+                      <a href="{% url 'home_page' %}">Back to homepage</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<br/>
+  <br/>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="about footer-item">
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/bruteforce_devops/"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://wa.me/message/3ETYONMC7YTCG1"><i class="fa fa-whatsapp"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="services footer-item">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Website Design & Development</a></li>
+              <li><a href="#">Hosting & Domain Registration</a></li>
+              <li><a href="#">Social & Digital Marketing</a></li>
+              <li><a href="#">Website Optimization</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="community footer-item">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="#">Digital Marketing</a></li>
+              <li><a href="#">Business Ideas</a></li>
+              <li><a href="#">Website Checkup</a></li>
+              <li><a href="#">Seo Optimisation</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="copyright">
+            <p>Copyright © 2021 Bruteforce web services co. All Rights Reserved.
+            <br>
+            Powered by Bruteforce</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}" ></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}" ></script>
+  <script src="{% static 'assets/js/animation.js' %}" ></script>
+  <script src="{% static 'assets/js/imagesloaded.js' %}" ></script>
+  <script src="{% static 'assets/js/custom.js' %}" ></script>
+
+
+  <script>
+  // Acc
+    $(document).on("click", ".naccs .menu div", function() {
+      var numberIndex = $(this).index();
+
+      if (!$(this).is("active")) {
+          $(".naccs .menu div").removeClass("active");
+          $(".naccs ul li").removeClass("active");
+
+          $(this).addClass("active");
+          $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
+
+          var listItemHeight = $(".naccs ul")
+            .find("li:eq(" + numberIndex + ")")
+            .innerHeight();
+          $(".naccs ul").height(listItemHeight + "px");
+        }
+    });
+  </script>
+</body>
+</html>
