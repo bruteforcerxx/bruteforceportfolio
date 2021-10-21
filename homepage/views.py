@@ -52,3 +52,11 @@ def sitemap(request):
     page = 'sitemap.xml'
     template = loader.get_template(page)
     return HttpResponse(template.render({'header': 'TESTING ABOUT VIEW'}, request), status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+def google(request):
+    page = 'googled968c7bfc1d91ec1.html'
+    template = loader.get_template(page)
+    return HttpResponse(template.render({'header': 'TESTING ABOUT VIEW'}, request), status=status.HTTP_200_OK)
+
